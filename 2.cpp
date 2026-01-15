@@ -1,46 +1,15 @@
 #define _CRT_SECURE_NO_WARNINGS 
 #include <iostream>
-using namespace std;
-
-int main()
-{
-    int a = 21;
-    int b = 10;
-
-    if (a == b)
-    {
-        cout << "Line 1 - a 等于 b" << endl;
-    }
-    else
-    {
-        cout << "Line 1 - a 不等于 b" << endl;
-    }
-    if (a < b)
-    {
-        cout << "Line 2 - a 小于 b" << endl;
-    }
-    else
-    {
-        cout << "Line 2 - a 不小于 b" << endl;
-    }
-    if (a > b)
-    {
-        cout << "Line 3 - a 大于 b" << endl;
-    }
-    else
-    {
-        cout << "Line 3 - a 不大于 b" << endl;
-    }
-    /* change a and b values */
-    a = 5;
-    b = 20;
-    if (a <= b)
-    {
-        cout << "Line 4 - a 小于或等于 b" << endl;
-    }
-    if (a >= b)
-    {
-        cout << "Line 5 - b 大于或等于 a" << endl;
-    }
-    return 0;
+#include<iomanip>
+using std::setw;
+int main() {
+	int n[10];
+	for (int i = 0; i < 10; i++) {
+		n[i] = i + 100;
+	}
+	std::cout << "element" << setw(13) << "value" << std::endl;
+	for (int j = 0; j < 10; j++) {
+		std::cout << setw(7) << j << setw(13) << n[j] << std::endl;
+	}
+	return 0;
 }
